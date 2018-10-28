@@ -15,11 +15,11 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->rememberToken();
+            $table->string('personal_id')->unique();    //เลขบัตร
+            $table->string('password');                 //พาส
+            $table->string('name');                     //ชื่อเจ้าของ
+            $table->string('store_name');               //ชื่อร้าน
+            $table->string('tel');                      //เบอร์
             $table->timestamps();
         });
     }
