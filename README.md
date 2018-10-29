@@ -67,3 +67,11 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 # SE_KU_market
 laravel 5.7 https://www.codementor.io/magarrent/how-to-install-laravel-5-xampp-windows-du107u9ji
 xampp 7.2.10 https://sourceforge.net/projects/xampp/files/XAMPP%20Windows/7.2.10/
+how to install   
+1.install xampp
+2.install composer
+3.clone git to htdocs
+4.start xampp  apache  mysql
+4.cmd cd xampp\htdocs\kumarket   run command   composer install
+5.copy env file from group chat to folder kumarket
+6.test  go to http://localhost/kumarket/public/mos or http://localhost/kumarket/public/phet
