@@ -20,6 +20,7 @@ class CreateUsersTable extends Migration
             $table->string('name');                     //ชื่อเจ้าของ
             $table->string('store_name');               //ชื่อร้าน
             $table->string('tel');                      //เบอร์
+            $table->string('ban');                      // YES = ban
             $table->timestamps();
         });
     }
