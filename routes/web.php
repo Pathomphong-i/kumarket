@@ -17,3 +17,7 @@ Route::get('/', function () {
 
 Route::get('/validation','ValidationController@showform');
 Route::post('/validation','ValidationController@validateform');
+
+Route::get('/mos', function () {
+    return view('mos');
+});
