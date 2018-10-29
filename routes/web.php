@@ -21,3 +21,7 @@ Route::post('/validation','ValidationController@validateform');
 Route::get('/mos', function () {
     return view('mos');
 });
+
+Route::get('/phet', function () {
+    return view('phet');
+});
