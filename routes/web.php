@@ -25,3 +25,7 @@ Route::get('/mos', function () {
 Route::get('/phet', function () {
     return view('phet');
 });
+
+Route::get('/lookkaew', function () {
+    return view('lookkaew');
+});
