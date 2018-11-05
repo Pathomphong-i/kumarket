@@ -30,6 +30,6 @@ Route::get('/lookkaew', function () {
     return view('lookkaew');
 });
 
-Route::get('/ohm', function () {
-    return view('ohm');
+Route::get('/nae', function () {
+    return view('nae');
 });
