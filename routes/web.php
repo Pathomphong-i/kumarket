@@ -29,3 +29,7 @@ Route::get('/phet', function () {
 Route::get('/lookkaew', function () {
     return view('lookkaew');
 });
+
+Route::get('/ohm', function () {
+    return view('ohm');
+});
