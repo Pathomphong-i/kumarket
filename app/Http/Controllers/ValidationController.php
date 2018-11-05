@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 
 class ValidationController extends Controller {
    public function showform(){
-      return view('login'); // แสดงหน้า login
+      return view('user'); // แสดงหน้า login
    }
    //validatetion สำหรับ login
    public function validateform(Request $request){ 
