@@ -58,27 +58,27 @@ body {font-family: Arial;}
 
 <div id="Set time" class="tabcontent">
   <h3>ตั้งเวลา</h3>
-  <p>มอส</p>
+  <p>มอส ตั้งวันในสัปดาห์  ตั้งเวลาเริ่ม เวลาหยุด ตั้งประกาศ</p>
 </div>
 
 <div id="Print" class="tabcontent">
   <h3>พิมพ์สรุป</h3>
-  <p>ลูกแก้ว</p> 
+  <p>ลูกแก้ว รายชื่อที่จะมาวันนี้ ปุ่มบันทึก(โหลดpdf)</p> 
 </div>
 
 <div id="Add user" class="tabcontent">
   <h3>เพิ่มผู้ใช้</h3>
-  <p>เน</p> 
+  <p>เน ฟอร์มกรอกข้อมูล สุ่มพาสให้ยูส ปุ่มบันทึก</p> 
 </div>
 
 <div id="Edit user" class="tabcontent">
   <h3>แก้ไขผู้ใช้</h3>
-  <p>โอม</p> 
+  <p>โอม  รายการทั้งหมด คลิกแก้ข้อมูล ปุ่มบันทึก</p> 
 </div>
 
 <div id="Ban user" class="tabcontent">
   <h3>ระงับผู้ใช้</h3>
-  <p>เพชร</p> 
+  <p>เพชร แสดงรายชื่อที่โดนระงับบน เลือกติ๊กระงับล่าง ปุ่มบันทึก</p> 
 </div>
 <script>
 function openCity(evt, cityName) {
