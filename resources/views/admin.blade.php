@@ -46,7 +46,7 @@ body {font-family: Arial;}
 <body>
 
 <h2>KU SRC Night Market</h2>
-<p>ประจำวันอังคารที่ xxxx</p>
+<p>ประจำวัน xxx ที่ xxxx</p>
 
 <div class="tab">
   <button class="tablinks" onclick="openCity(event, 'Set time')">ตั้งเวลา</button>
@@ -57,8 +57,47 @@ body {font-family: Arial;}
 </div>
 
 <div id="Set time" class="tabcontent">
-  <h3>ตั้งเวลา</h3>
-  <p>มอส ตั้งวันในสัปดาห์  ตั้งเวลาเริ่ม เวลาหยุด ตั้งประกาศ</p>
+    
+    </form>
+    <form action="/action_page.php">
+    <br>วันจัดตลาด<br>
+    <select name="วันจัดตลาด">
+        <option value="sun_market">อาทิตย์</option>
+        <option value="mon_market">จันทร์</option>
+        <option value="tu_market">อังคาร</option>
+        <option value="wed_market">พุธ</option>
+        <option value="th_market">พฤหัสบดี</option>
+        <option value="fri_market">ศุกร์</option>
+        <option value="sat_market">เสาร์</option>
+    </select>
+    <br><br>
+
+    เปิดระบบ วัน:<select name="day_start">
+        <option value="sun_market">อาทิตย์</option>
+        <option value="mon_market">จันทร์</option>
+        <option value="tu_market">อังคาร</option>
+        <option value="wed_market">พุธ</option>
+        <option value="th_market">พฤหัสบดี</option>
+        <option value="fri_market">ศุกร์</option>
+        <option value="sat_market">เสาร์</option>
+    </select> 
+    เวลา:<input type="time" name="usr_time"> 
+    <br><br>
+    ปิดระบบ วัน:<select name="day_stop">
+        <option value="sun_market">อาทิตย์</option>
+        <option value="mon_market">จันทร์</option>
+        <option value="tu_market">อังคาร</option>
+        <option value="wed_market">พุธ</option>
+        <option value="th_market">พฤหัสบดี</option>
+        <option value="fri_market">ศุกร์</option>
+        <option value="sat_market">เสาร์</option>
+    </select>
+    เวลา:<input type="time" name="usr_time">
+    <br><br>
+    <textarea id="announce" name="announce" placeholder="ข่าวประกาศ.." rows="4" cols="50"></textarea>
+    <br><br>
+    <input type="submit" name="save">
+    </form>
 </div>
 
 <div id="Print" class="tabcontent">
