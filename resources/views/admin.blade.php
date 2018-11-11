@@ -65,11 +65,12 @@ body {font-family: Arial;}
 <p>ประจำวันอังคารที่ xxxx</p>
 
 <div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'Set time')">ตั้งเวลา</button>
-  <button class="tablinks" onclick="openCity(event, 'Print')">พิมพ์สรุป</button>
-  <button class="tablinks" onclick="openCity(event, 'Add user')">เพิ่มผู้ใช้</button>
-  <button class="tablinks" onclick="openCity(event, 'Edit user')">แก้ไขผู้ใช้</button>
-  <button class="tablinks" onclick="openCity(event, 'Ban user')">ระงับผู้ใช้</button>
+  <button class="tablinks" onclick="openTab(event, 'Set time')">ตั้งเวลา</button>
+  <button class="tablinks" onclick="openTab(event, 'Print')" id="defaultOpen">พิมพ์สรุป</button>
+  <button class="tablinks" onclick="openTab(event, 'Add user')">เพิ่มผู้ใช้</button>
+  <button class="tablinks" onclick="openTab(event, 'Edit user')">แก้ไขผู้ใช้</button>
+  <button class="tablinks" onclick="openTab(event, 'Ban user')">ระงับผู้ใช้</button>
+
 </div>
 
 <div id="Set time" class="tabcontent">
@@ -205,8 +206,9 @@ body {font-family: Arial;}
   <br>
   <button type="submit">Ban</button>
 </div>
+
 <script>
-function openCity(evt, cityName) {
+function openTab(evt, tabName) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
@@ -216,14 +218,11 @@ function openCity(evt, cityName) {
     for (i = 0; i < tablinks.length; i++) {
         tablinks[i].className = tablinks[i].className.replace(" active", "");
     }
-    document.getElementById(cityName).style.display = "block";
+    document.getElementById(tabName).style.display = "block";
     evt.currentTarget.className += " active";
 }
+document.getElementById("defaultOpen").click();
 </script>
 
 </body>
 </html>
-<<<<<<< Updated upstream
-=======
-</html> 
->>>>>>> Stashed changes
