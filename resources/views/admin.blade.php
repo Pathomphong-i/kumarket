@@ -55,6 +55,8 @@ body {font-family: Arial;}
   width: 35%;
   padding: 15px;
 }
+.center {text-align: center;
+}
 </style>
 </head>
 <body>
@@ -93,8 +95,8 @@ body {font-family: Arial;}
         <option value="th_market">พฤหัสบดี</option>
         <option value="fri_market">ศุกร์</option>
         <option value="sat_market">เสาร์</option>
-    </select> 
-    เวลา:<input type="time" name="usr_time"> 
+    </select>
+    เวลา:<input type="time" name="usr_time">
     <br><br>
     ปิดระบบ วัน:<select name="day_stop">
         <option value="sun_market">อาทิตย์</option>
@@ -126,6 +128,30 @@ body {font-family: Arial;}
 <div id="Edit user" class="tabcontent">
   <h3>แก้ไขผู้ใช้</h3>
   <p>โอม  รายการทั้งหมด คลิกแก้ข้อมูล ปุ่มบันทึก</p>
+<h3 style="text-align: center;">รายชื่อ</h3>
+  <table width="1500" border="1" cellspacing="2" cellpadding="0">
+  <tr>
+    <td width="125"><center>หมายเลขเลขร้าน</center></td>
+    <td width="125"><center>ชื่อ</center></td>
+    <td width="125"><center>นามสกุล</center></td>
+    <td width="125"><center>เลขบัตรประชาชน</center></td>
+    <td width="125"><center>ชื่อร้าน</center></td>
+    <td width="125"><center>เบอร์โทรศัพท์</center></td>
+    <td width="125"></td>
+    <?php
+        for ($i=1; $i < 10; $i++) {
+          echo "<tr class=\"ptr\">";
+          echo "<td>" .$i. "</td>";
+          echo "<td>" .$i. "</td>";
+          echo "<td>" .$i. "</td>";
+          echo "<td>" .$i. "</td>";
+          echo "<td>" .$i. "</td>";
+          echo "<td>" .$i. "</td>";
+          echo "<td class=\"center\"><input type=\"button\" value=\"Edit\" id=".$i."><input type=\"button\" value=\"Delete\" id=".$i."></td>";
+          echo "</tr>";
+        }
+    ?>
+  </table>
 </div>
 
 <div id="Ban user" class="tabcontent">
@@ -138,6 +164,7 @@ body {font-family: Arial;}
         <th class="pth">ชื่อ</th>
         <th class="pth">นามสกุล</th>
         <th class="pth">ชื่อร้าน</th>
+        <th class="pth"></th>
       </tr>
       <?php
         for ($i=1; $i < 10; $i++) {
@@ -145,11 +172,14 @@ body {font-family: Arial;}
           echo "<td class=\"ptd\">" .$i. "</td>";
           echo "<td class=\"ptd\">" .$i. "</td>";
           echo "<td class=\"ptd\">" .$i. "</td>";
+          echo "<td class=\"ptd\"><input type=\"checkbox\" id=".$i."></td>";
           echo "</tr>";
         }
        ?>
     </table>
   </div>
+  <br>
+      <button type="submit">ยกเลิก Ban</button>
   <br>
   <div style="height:50%;overflow:auto;">
     <h3 style="text-align: center;">รายชื่อที่ยังไม่ถูกระงับ</h3>
@@ -193,3 +223,7 @@ function openCity(evt, cityName) {
 
 </body>
 </html>
+<<<<<<< Updated upstream
+=======
+</html> 
+>>>>>>> Stashed changes
