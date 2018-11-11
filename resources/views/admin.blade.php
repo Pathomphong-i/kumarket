@@ -109,7 +109,7 @@ body {font-family: Arial;}
     <br><br>
     <textarea id="announce" name="announce" placeholder="ข่าวประกาศ.." rows="4" cols="50"></textarea>
     <br><br>
-    <input type="submit" name="save">
+    <button type="submit">บันทึก</button>
     </form>
 </div>
 
@@ -192,8 +192,4 @@ function openCity(evt, cityName) {
 </script>
 
 </body>
-<<<<<<< HEAD
 </html>
-=======
-</html> 
->>>>>>> master
