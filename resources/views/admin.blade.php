@@ -55,6 +55,8 @@ body {font-family: Arial;}
   width: 35%;
   padding: 15px;
 }
+.center {text-align: center;
+}
 </style>
 </head>
 <body>
@@ -126,6 +128,30 @@ body {font-family: Arial;}
 <div id="Edit user" class="tabcontent">
   <h3>แก้ไขผู้ใช้</h3>
   <p>โอม  รายการทั้งหมด คลิกแก้ข้อมูล ปุ่มบันทึก</p>
+<h3 style="text-align: center;">รายชื่อ</h3>
+  <table width="1500" border="1" cellspacing="2" cellpadding="0">
+  <tr>
+    <td width="125"><center>หมายเลขเลขร้าน</center></td>
+    <td width="125"><center>ชื่อ</center></td>
+    <td width="125"><center>นามสกุล</center></td>
+    <td width="125"><center>เลขบัตรประชาชน</center></td>
+    <td width="125"><center>ชื่อร้าน</center></td>
+    <td width="125"><center>เบอร์โทรศัพท์</center></td>
+    <td width="125"></td>
+    <?php
+        for ($i=1; $i < 10; $i++) {
+          echo "<tr class=\"ptr\">";
+          echo "<td>" .$i. "</td>";
+          echo "<td>" .$i. "</td>";
+          echo "<td>" .$i. "</td>";
+          echo "<td>" .$i. "</td>";
+          echo "<td>" .$i. "</td>";
+          echo "<td>" .$i. "</td>";
+          echo "<td class=\"center\"><input type=\"button\" value=\"Edit\" id=".$i."><input type=\"button\" value=\"Delete\" id=".$i."></td>";
+          echo "</tr>";
+        }
+    ?>
+  </table>
 </div>
 
 <div id="Ban user" class="tabcontent">
@@ -197,3 +223,7 @@ function openCity(evt, cityName) {
 
 </body>
 </html>
+<<<<<<< Updated upstream
+=======
+</html> 
+>>>>>>> Stashed changes

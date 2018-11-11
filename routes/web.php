@@ -32,6 +32,10 @@ Route::get('/lookkaew', function () {
 
 Route::get('/nae', function () {
     return view('nae');
+});
+
+Route::get('/ohm', function () {
+    return view('ohm');
 }); 
 
 Route::get('/admin', function () {
