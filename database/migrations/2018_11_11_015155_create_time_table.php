@@ -13,7 +13,7 @@ class CreateTimeTable extends Migration
      */
     public function up()
     {
-        Schema::create('time', function (Blueprint $table) {
+        Schema::create('times', function (Blueprint $table) {
             $table->increments('id');
             $table->string('day_ku_night', 20);
             $table->string('day_of_week_start', 20);
@@ -36,6 +36,6 @@ class CreateTimeTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('time');
+        Schema::dropIfExists('times');
     }
 }

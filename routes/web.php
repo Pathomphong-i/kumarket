@@ -38,6 +38,8 @@ Route::get('/ohm', function () {
     return view('ohm');
 }); 
 
-Route::get('/admin', function () {
-    return view('admin');
-});
+// Route::get('/admin', function () {
+//     return view('admin');
+// });
+Route::resource('admin', 'TimeController');
+//Route::resource('shares', 'ShareController');

@@ -2,6 +2,11 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Ku Src Night Market</title>
+<link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css" />
+
 <style>
 body {font-family: Arial;}
 
@@ -61,8 +66,8 @@ body {font-family: Arial;}
 </head>
 <body>
 
-<h2>KU SRC Night Market</h2>
-<p>ประจำวันอังคารที่ xxxx</p>
+<h2><center>KU SRC Night Market</center></h2>
+<h3><center>ประจำวันอังคารที่ xxxx</center></h3>
 
 <div class="tab">
   <button class="tablinks" onclick="openTab(event, 'Set time')">ตั้งเวลา</button>
@@ -74,10 +79,11 @@ body {font-family: Arial;}
 </div>
 
 <div id="Set time" class="tabcontent">
-  </form>
-    <form action="/action_page.php">
-    <br>วันจัดตลาด<br>
-    <select name="วันจัดตลาด">
+@foreach($times as $time)
+  <form>  
+    <label for="ku_day">จัดตลาดวัน :</label>
+    <select name="ku_day" id="ku_day">   
+        <option value="old" selected="selected">{{$time->day_ku_night}}</option>
         <option value="sun_market">อาทิตย์</option>
         <option value="mon_market">จันทร์</option>
         <option value="tu_market">อังคาร</option>
@@ -87,8 +93,9 @@ body {font-family: Arial;}
         <option value="sat_market">เสาร์</option>
     </select>
     <br><br>
-
-    เปิดระบบ วัน:<select name="day_start">
+    <label for="day_start">เปิดระบบวัน :</label>
+    <select name="day_start" id="day_start">
+        <option value="old" selected="selected">{{$time->day_of_week_start}}</option>
         <option value="sun_market">อาทิตย์</option>
         <option value="mon_market">จันทร์</option>
         <option value="tu_market">อังคาร</option>
@@ -97,23 +104,29 @@ body {font-family: Arial;}
         <option value="fri_market">ศุกร์</option>
         <option value="sat_market">เสาร์</option>
     </select>
-    เวลา:<input type="time" name="usr_time">
+    <label for="start_time">เวลา : </label>
+    <input id="start_time" type="time" name="start_time" value={{$time->time_start}}>
     <br><br>
-    ปิดระบบ วัน:<select name="day_stop">
-        <option value="sun_market">อาทิตย์</option>
-        <option value="mon_market">จันทร์</option>
-        <option value="tu_market">อังคาร</option>
-        <option value="wed_market">พุธ</option>
-        <option value="th_market">พฤหัสบดี</option>
-        <option value="fri_market">ศุกร์</option>
-        <option value="sat_market">เสาร์</option>
+    <label for="day_stop">ปิดระบบวัน :</label>
+    <select name="day_stop" id="day_stop">
+      <option value="old" selected="selected">{{$time->day_of_week_stop}}</option>
+      <option value="sun_market">อาทิตย์</option>
+      <option value="mon_market">จันทร์</option>
+      <option value="tu_market">อังคาร</option>
+      <option value="wed_market">พุธ</option>
+      <option value="th_market">พฤหัสบดี</option>
+      <option value="fri_market">ศุกร์</option>
+      <option value="sat_market">เสาร์</option>
     </select>
-    เวลา:<input type="time" name="usr_time">
-    <br><br>
-    <textarea id="announce" name="announce" placeholder="ข่าวประกาศ.." rows="4" cols="50"></textarea>
+    <label for="stop_time">เวลา : </label>
+    <input id="stop_time" type="time" name="stop_time" value={{$time->time_stop}}>
+    <br>ประกาศข่าวสาร<br>
+    <textarea id="announce" name="announce" rows="4" cols="50" value="{{$time->announce}}" >{{$time->announce}}</textarea>
     <br><br>
     <button type="submit">บันทึก</button>
-    </form>
+    </table>
+  @endforeach
+  </form>
 </div>
 
 <div id="Print" class="tabcontent">
@@ -129,7 +142,7 @@ body {font-family: Arial;}
 <div id="Edit user" class="tabcontent">
   <h3>แก้ไขผู้ใช้</h3>
   <p>โอม  รายการทั้งหมด คลิกแก้ข้อมูล ปุ่มบันทึก</p>
-<h3 style="text-align: center;">รายชื่อ</h3>
+  <h3 style="text-align: center;">รายชื่อ</h3>
   <table width="1500" border="1" cellspacing="2" cellpadding="0">
   <tr>
     <td width="125"><center>หมายเลขเลขร้าน</center></td>
