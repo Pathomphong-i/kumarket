@@ -80,9 +80,9 @@ body {font-family: Arial;}
 
 <div id="Set time" class="tabcontent">
 @foreach($times as $time)
-  <form>  
+  <form>
     <label for="ku_day">จัดตลาดวัน :</label>
-    <select name="ku_day" id="ku_day">   
+    <select name="ku_day" id="ku_day">
         <option value="old" selected="selected">{{$time->day_ku_night}}</option>
         <option value="sun_market">อาทิตย์</option>
         <option value="mon_market">จันทร์</option>
@@ -132,6 +132,23 @@ body {font-family: Arial;}
 <div id="Print" class="tabcontent">
   <h3>พิมพ์สรุป</h3>
   <p>ลูกแก้ว รายชื่อที่จะมาวันนี้ ปุ่มบันทึก(โหลดpdf)</p>
+  <input type="button" value="Print" onclick="window.location.href='PDF.php'" />
+  <table width="100%" border="1">
+    <thead>
+      <td colspan="1">หมายเลขร้าน</td>
+      <td colspan="1">ชื่อ</td>
+      <td colspan="1">นามสกุล</td>
+      <td colspan="1">ชื่อร้าน</td>
+      <td colspan="1">หมายเหตุ</td>
+    </thead>
+    <tbody>
+      <th>1</th>
+      <th>AAAAAAAAAA</th>
+      <th>BBBBBBBBBB</th>
+      <th>CCCCCCCCCC</th>
+      <th> </th>
+    </tbody>
+  </table>
 </div>
 
 <div id="Add user" class="tabcontent">
@@ -141,10 +158,10 @@ body {font-family: Arial;}
       <div class="ui card container">
           <div class="content">
               <form class="ui form">
-                
+
                   <div class="inline field">
                       <label for="side1"> เลขบัตรประชาชน </label>
-                      
+
                   </div>
 
                   <div class="inline field">
@@ -153,7 +170,7 @@ body {font-family: Arial;}
 
                   <div class="inline field">
                       <label for="side2"> ชื่อ </label>
-                      
+
                   </div>
 
                   <div class="inline field">
@@ -162,7 +179,7 @@ body {font-family: Arial;}
 
                   <div class="inline field">
                       <label for="side2"> นามสกุล </label>
-                      
+
                   </div>
                   <div class="inline field">
                       <input type="text" name="side2" id="side2" min="1" required  maxlength="4">
@@ -170,7 +187,7 @@ body {font-family: Arial;}
 
                   <div class="inline field">
                       <label for="side2"> ชื่อร้าน </label>
-                      
+
                   </div>
                   <div class="inline field">
                       <input type="text" name="side2" id="side2" min="1" required  maxlength="4">
@@ -178,7 +195,7 @@ body {font-family: Arial;}
 
                   <div class="inline field">
                       <label for="side2"> เบอร์โทรศัพท์ </label>
-                      
+
                   </div>
                   <div class="inline field">
                       <input type="text" name="side2" id="side2" min="1" required  maxlength="4">
@@ -186,14 +203,14 @@ body {font-family: Arial;}
 
                   <div class="inline field">
                       <label for="side2"> เลขของร้าน </label>
-                      
+
                   </div>
                   <div class="inline field">
                       <input type="text" name="side2" id="side2" min="1" required  maxlength="4">
                     </div>
 
                   </div>
-                
+
                   <div class="inline field">
                       <input id="submit" type=button value="Submit"/>
                       <input type="reset" name="reset" value=" Reset "/>
