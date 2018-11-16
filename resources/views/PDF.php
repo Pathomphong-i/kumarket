@@ -1,6 +1,6 @@
 <?php
 	//เรียกใช้ไฟล์ autoload.php ที่อยู่ใน Folder vendor
-	include_once __DIR__ . 'C:\xampp\htdocs\kumarket\vendor\autoload.php';
+	include_once __DIR__ . 'kumarket/vendor/autoload.php';
 
 	//ตั้งค่าการเชื่อมต่อฐานข้อมูล
 
