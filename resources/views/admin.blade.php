@@ -139,6 +139,7 @@ body {font-family: Arial;}
       <td colspan="1">ชื่อ</td>
       <td colspan="1">นามสกุล</td>
       <td colspan="1">ชื่อร้าน</td>
+      <td colspan="1">เบอร์โทรศัพท์</td>
       <td colspan="1">หมายเหตุ</td>
     </thead>
     <tbody>
@@ -146,6 +147,7 @@ body {font-family: Arial;}
       <th>AAAAAAAAAA</th>
       <th>BBBBBBBBBB</th>
       <th>CCCCCCCCCC</th>
+      <th>0800000000</th>
       <th> </th>
     </tbody>
   </table>

@@ -18,7 +18,7 @@ $mpdf = new mPDF();
 $head = '
 <style>
 	body{
-		font-family: "Garuda";//เรียกใช้font Garuda สำหรับแสดงผล ภาษาไทย
+		font-family: "Garuda";
 	}
 </style>
 
