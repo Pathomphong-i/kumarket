@@ -15,26 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/mos', function () {
-    return view('mos');
-});
-
-Route::get('/phet', function () {
-    return view('phet');
-});
-
-Route::get('/lookkaew', function () {
-    return view('lookkaew');
-});
-
-Route::get('/nae', function () {
-    return view('nae');
-});
-
-Route::get('/ohm', function () {
-    return view('ohm');
-}); 
-
 // Route::get('/admin', function () {
 //     return view('admin');
 // });
